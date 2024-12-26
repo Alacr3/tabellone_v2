@@ -1,0 +1,323 @@
+/* GENERALE */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #181818;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 5vw;
+}
+
+.img {
+    width: 30%;
+    height: auto;
+    justify-content: center;
+}
+
+.input-hidden {
+    -webkit-text-security: disc;
+    font-family: "Courier New", monospace;
+}
+
+/* BUTTON */
+button {
+    padding: 0.5%;
+    font-size: 1.4rem;
+    background-color: #ccebdf;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3a4257;
+    color: #ccebdf;
+    border: none;
+}
+
+/* PRIMA PAGINA */
+#page-1 {
+    padding-top: 10%;
+}
+
+#input-field {
+    background-color: #ccebdf;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    width: 30%;
+    height: 50px;
+    padding: 0.5% 1%;
+    color: #3a4257;
+    font-size: 2rem;
+    outline: none;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.submit-button {
+    font-size: 17px;
+    padding: 0.5em 2em;
+    margin-left: -0.2%;
+    border: transparent;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+    background: #3a4257;
+    border-radius: 0 10px 10px 0;
+    transition: 0.3s;
+}
+
+.submit-button:hover {
+    background: #e44b5d;
+    cursor: pointer;
+}
+
+.submit-button:active {
+    transform: translate(0em, 0.2em);
+}
+
+.submit-button span {
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: #ccebdf;
+    -webkit-background-clip: text;
+    color: #ccebdf;
+    transition: 0.3s;
+}
+
+.submit-button:hover span {
+    background: #3a4257;
+    -webkit-background-clip: text;
+    color: #ccebdf;
+}
+
+/* PAGE 2 */
+#page-2 .iframe-container {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+/* GRIGLIA */
+/* Griglia dinamica */
+.grid {
+    display: flex;
+    flex-wrap: wrap; /* Permette di andare a capo con le parole */
+    justify-content: flex-start; /* Allinea i box all'inizio per un miglior controllo del wrapping */
+    gap: 80px; /* Aumentato il gap tra i box */
+    margin-top: 20px;
+    padding: 0 10%;
+    width: 80%;
+}
+
+/* Box dinamici ingranditi */
+.box {
+    border: 1px solid #3a4257;
+    border-radius: 10px;
+    display: inline-block; /* Cambiato da 'flex' a 'inline-block' per un migliore comportamento a capo */
+    height: 152px; /* Aumentato l'altezza del box (circa +10%) */
+    min-width: 160px; /* Aumentato la larghezza minima (circa +10%) */
+    max-width: 200px; /* Aumentato la larghezza massima (circa +10%) */
+    font-size: 7rem; /* Aumentato la dimensione del font (circa +10%) */
+    font-weight: bold;
+    background: #f0f0f0;
+    text-align: center;
+    line-height: 150px; /* Allinea verticalmente il testo nel box ingrandito */
+    white-space: nowrap; /* Evita che il testo vada a capo dentro ogni box */
+    word-wrap: break-word; /* Permette al box di andare a capo interamente quando una parola non ci sta */
+    margin: 5px;
+}
+
+/* Box per lo spazio */
+.space {
+    display: none;
+    background: transparent;
+    border: none;
+    pointer-events: none;
+}
+
+
+/* BUTTON PAGE-2 */
+
+.b2, .b3, .b4 {
+    background: #3a4257;
+    color: #ccebdf;
+    font-weight: 600;
+    border-radius: 10px;
+    height: 59px;
+}
+
+.b3, .b4 {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+}
+
+.b2:hover, .b3:hover, .b4:hover {
+    background: #e44b5d;
+    color: #ccebdf;
+}
+
+input#letter-input {
+    font-size: 3rem;  /* Aumento della dimensione del font */
+    font-weight: 600;
+    background-color: #ccebdf;
+    border-radius: 10px;
+    border: none;
+    width: 15%;  /* Larghezza aumentata */
+    text-align: center;
+    color: #3a4257;
+    outline: none;
+}
+
+input#letter-input:focus {
+    border-color: #3a4257;
+    box-shadow: 0 0 30px #3a4257;
+}
+
+.b2 {
+    padding: 1% 3.6%;  /* Maggiore padding */
+    font-size: 2rem;  /* Maggiore dimensione del font */
+}
+
+
+/* SEZIONE PER I PULSANTI */
+.button-container {
+    display: flex;
+    flex-direction: column;  /* Mantenere la disposizione in colonna per l'input */
+    align-items: center;
+    gap: 20px;  /* Distanza tra i vari blocchi */
+    margin-top: 3%;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;  /* Distanza tra input e bottone */
+    justify-content: center;
+    align-items: center;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: row;  /* Disporre i pulsanti in riga (affiancati) */
+    gap: 15px;  /* Distanza tra i pulsanti */
+    justify-content: center;
+    align-items: center;
+}
+
+/* CUSTOM ALERT */
+#custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+
+.notifications-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    padding: 10%;
+    font-size: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.success {
+    padding: 1rem;
+    border-radius: 0.375rem;
+    background-color: #ccebdf;
+    width: 100%;
+}
+
+.success-button-secondary {
+    padding: 1.5rem 2rem;
+    width: 100%;
+    background-color: #3a4257;
+    color: #ccebdf;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    border-radius: 10px;
+    border: none;
+}
+
+.success-button-secondary:hover {
+    background-color: #e44b5d;
+    color: #ccebdf;
+}
+
+#alert-message {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 8%;
+}
+
+.success-button-container {
+    display: flex;
+    margin-top: 0.875rem;
+    justify-content: center;
+}
+
+/* FOOTER */
+footer {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: static;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a:link,
+footer a:visited {
+    color: #e44b5d;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 2560px) {
+    .box {
+        height: 100px; /* Aumentato l'altezza del box (circa +10%) */
+        min-width: 90px; /* Aumentato la larghezza minima (circa +10%) */
+        max-width: 200px; /* Aumentato la larghezza massima (circa +10%) */
+        font-size: 4rem; /* Aumentato la dimensione del font (circa +10%) */
+        line-height: 110px; /* Allinea verticalmente il testo nel box ingrandito */
+        margin: 5px;
+    }
+
+    .grid {
+        gap: 50px; /* Aumentato il gap tra i box */
+        margin-top: 20px;
+        padding: 0 10%;
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 1920px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
+}
